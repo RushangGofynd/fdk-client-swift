@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMinor(from: "5.4.4")),
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "1.3.8")),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .branch("develop")),
+        .package(url: "https://dev.azure.com/GoFynd/FyndPlatformCoreLibraries/_git/flick-swift", .branch("develop")),
     ],
     targets: [
         .target(
