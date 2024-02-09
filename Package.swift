@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "FDKClient",
-            dependencies: ["Alamofire", "CryptoSwift"],
+            dependencies: ["Alamofire", "CryptoSwift","flick-swift"],
             path: "Sources"
         ),
         .testTarget(
