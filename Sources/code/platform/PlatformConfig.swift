@@ -24,6 +24,7 @@ public class PlatformConfig {
         self.extraHeaders = extraHeaders
         self.locationDetails = locationDetails
         self.session = session
+        self.confingFlickSwift()
     }
     
     public init?(companyId: String, apiKey: String, apiSecret: String, domain: String = "https://api.fynd.com", userAgent: String? = nil, language: String? = "en-IN", currency: String? = "INR", extraHeaders: [(key: String, value: String)] = [], locationDetails: LocationDetails? = nil, session: Alamofire.Session = AF) {
@@ -37,6 +38,15 @@ public class PlatformConfig {
         self.extraHeaders = extraHeaders
         self.locationDetails = locationDetails
         self.session = session
+        self.confingFlickSwift()
+    }
+
+    func confingFlickSwift(){
+         FlickSwift.shared.configure(
+                baseURL: baseURL,
+                token: oauthClient.token ?? ""
+         )
+
     }
 }
 
@@ -76,4 +86,3 @@ public extension PlatformConfig {
         var latitude: String? = nil
     }
 }
-
