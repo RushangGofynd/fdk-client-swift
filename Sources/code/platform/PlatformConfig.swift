@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import flick_swift
 
 public class PlatformConfig {
     var companyId: String
@@ -43,8 +44,8 @@ public class PlatformConfig {
 
     func confingFlickSwift(){
          FlickSwift.shared.configure(
-                baseURL: baseURL,
-                token: oauthClient.token ?? ""
+                baseURL: domain,
+                token: oauthClient.token.accessToken
          )
 
     }
