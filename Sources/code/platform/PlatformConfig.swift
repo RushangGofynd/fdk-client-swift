@@ -44,13 +44,17 @@ public class PlatformConfig {
 
     func confingFlickSwift(){
             if let token = oauthClient.token{
-             FlickSwift.shared.configure(
+             getInstance().configure(
                     baseURL: domain,
                     token: token.accessToken
                )
             }
 
     }
+     func getInstance() -> FlickSwift {
+        return FlickSwift.shared
+     }
+
 }
 
 public extension PlatformConfig {
