@@ -51,7 +51,7 @@ public class PlatformConfig {
             }
 
     }
-     func getInstance() -> FlickSwift {
+     public func getInstance() -> FlickSwift {
         return FlickSwift.shared
      }
 
